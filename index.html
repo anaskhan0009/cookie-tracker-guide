@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie & Tracker Guide — How Web Tracking Works & How to Stop It | Dinal Studios</title>
+<meta name="description" content="Interactive cookie & tracker guide: first vs third-party cookies, what trackers learn about you, and step-by-step blocking walkthroughs for every browser.">
+<meta name="keywords" content="cookies explained, third party cookies, web tracking, how trackers work, block third party cookies, browser privacy, cookie guide, fingerprinting, online privacy">
+<meta name="author" content="Dinal Studios">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://anaskhan0009.github.io/cookie-tracker-guide/">
+<meta property="og:title" content="Cookie & Tracker Guide — How Web Tracking Works & How to Stop It | Dinal Studios">
+<meta property="og:description" content="Interactive cookie & tracker guide: first vs third-party cookies, what trackers learn about you, and step-by-step blocking walkthroughs for every browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anaskhan0009.github.io/cookie-tracker-guide/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cookie & Tracker Guide — How Web Tracking Works & How to Stop It | Dinal Studios">
+<meta name="twitter:description" content="Interactive cookie & tracker guide: first vs third-party cookies, what trackers learn about you, and step-by-step blocking walkthroughs for every browser.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cookie & Tracker Guide \u2014 How Web Tracking Works & How to Stop It",
+  "url": "https://anaskhan0009.github.io/cookie-tracker-guide/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any (Web browser)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Dinal Studios"
+  }
+}
+</script>
+<style>
+  * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+  body { margin: 0; background: #0a0f1a; color: #dbe4f3; }
+  header { background: radial-gradient(1000px 400px at 50% -80px, #14532d 0%, #0a0f1a 60%); padding: 42px 16px 28px; text-align: center; border-bottom: 1px solid #1d2b45; }
+  header h1 { margin: 0 0 8px; font-size: 31px; letter-spacing: .5px; }
+  header h1 span { color: #22c55e; }
+  header p { margin: 0; color: #93a5c4; font-size: 15px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 22px 14px 46px; }
+  .card { background: #111a2c; border: 1px solid #1f2c47; border-radius: 14px; padding: 22px; margin-bottom: 20px; }
+  .card h2 { margin: 0 0 6px; font-size: 20px; color: #fff; }
+  .card h3 { color: #22c55e; font-size: 15.5px; margin: 18px 0 8px; text-transform: uppercase; letter-spacing: .6px; }
+  .card .sub { color: #93a5c4; font-size: 13.5px; margin: 0 0 16px; line-height: 1.55; }
+  .card p, .card li { font-size: 14.5px; line-height: 1.65; color: #c6d2e8; }
+  .btn { background: #22c55e; color: #06280f; border: none; padding: 10px 18px; border-radius: 9px; cursor: pointer; font-weight: 700; font-size: 14px; }
+  .btn:hover { background: #16a34a; color: #fff; }
+  .btn.dark { background: #1f2c47; color: #dbe4f3; }
+  .btn.dark:hover { background: #2a3a5c; }
+  .btn.danger { background: #7f1d1d; color: #fecaca; }
+  .btn.small { padding: 6px 12px; font-size: 12.5px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .tile { background: #0a0f1a; border: 1px solid #1f2c47; border-radius: 10px; padding: 15px; }
+  .tile b { color: #fff; display: block; margin-bottom: 5px; font-size: 14.5px; }
+  .tile span { font-size: 13px; color: #93a5c4; line-height: 1.55; display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0; }
+  th, td { border: 1px solid #1f2c47; padding: 9px 10px; text-align: left; vertical-align: top; }
+  th { background: #0a0f1a; color: #86efac; }
+  td { color: #c6d2e8; }
+  .bar { height: 14px; background: #22304f; border-radius: 8px; overflow: hidden; margin: 12px 0 8px; }
+  .bar i { display: block; height: 100%; width: 0%; background: #22c55e; transition: width .45s, background .45s; }
+  .scorebig { font-size: 42px; font-weight: 800; color: #fff; line-height: 1; }
+  input[type=text], input[type=email], input[type=password], input[type=number], input[type=date], select, textarea { width: 100%; background: #0a0f1a; border: 1px solid #2a3a5c; color: #fff; border-radius: 8px; padding: 10px 11px; font-size: 14px; margin: 4px 0 12px; }
+  textarea { min-height: 74px; resize: vertical; }
+  label.flabel { font-size: 13px; color: #93a5c4; font-weight: 600; }
+  .item { display: flex; gap: 12px; background: #0a0f1a; border: 1px solid #1f2c47; border-radius: 10px; padding: 13px 14px; margin-bottom: 9px; align-items: flex-start; }
+  .item input[type=checkbox] { width: 20px; height: 20px; accent-color: #22c55e; margin-top: 2px; flex-shrink: 0; cursor: pointer; }
+  .item .t { font-size: 14.5px; color: #fff; font-weight: 600; }
+  .item .d { font-size: 12.5px; color: #93a5c4; margin-top: 2px; line-height: 1.5; }
+  .item.done { border-color: #14532d; opacity: .8; }
+  .rec { background: #0a0f1a; border: 1px solid #1f2c47; border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+  .rec .rt { color: #fff; font-weight: 700; font-size: 15px; margin-bottom: 4px; word-break: break-word; }
+  .rec .rm { font-size: 13px; color: #93a5c4; line-height: 1.6; word-break: break-word; }
+  .rec .rm b { color: #c6d2e8; }
+  .rec .ractions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .pill { display: inline-block; background: #1f2c47; color: #86efac; border-radius: 999px; padding: 2px 10px; font-size: 11.5px; font-weight: 700; }
+  .pill.red { background: #7f1d1d; color: #fecaca; }
+  .pill.amber { background: #713f12; color: #fde68a; }
+  .authnote { background: #0a0f1a; border: 1px dashed #2a3a5c; border-radius: 10px; padding: 12px 14px; font-size: 13px; color: #fbbf24; line-height: 1.6; margin-top: 12px; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+  .tab { background: #1f2c47; color: #dbe4f3; border: none; padding: 8px 16px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: 13px; }
+  .tab.on { background: #22c55e; color: #06280f; }
+  .msg { font-size: 13.5px; margin: 8px 0; min-height: 18px; }
+  .msg.err { color: #fca5a5; } .msg.ok { color: #86efac; }
+  .stepbtn { text-align: left; width: 100%; background: #0a0f1a; border: 1px solid #1f2c47; color: #dbe4f3; border-radius: 10px; padding: 13px 14px; margin-bottom: 9px; cursor: pointer; font-size: 14px; }
+  .stepbtn.on { border-color: #22c55e; }
+  .stepbtn b { color: #fff; }
+  .reveal { display: none; background: #0d1526; border: 1px solid #14532d; border-radius: 10px; padding: 13px 14px; margin: -3px 0 12px; font-size: 13.5px; line-height: 1.6; color: #c6d2e8; }
+  .optbtn { display: block; width: 100%; text-align: left; background: #0a0f1a; border: 1px solid #1f2c47; color: #dbe4f3; border-radius: 10px; padding: 11px 13px; margin-bottom: 8px; cursor: pointer; font-size: 14px; }
+  .optbtn:hover { border-color: #2a3a5c; }
+  .optbtn.right { border-color: #22c55e; background: #0d2013; }
+  .optbtn.wrong { border-color: #dc2626; background: #260d0d; }
+  .muted { color: #93a5c4; font-size: 13px; line-height: 1.6; }
+  .rowflex { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  footer { text-align: center; color: #64748b; font-size: 13px; padding: 26px 14px 40px; border-top: 1px solid #1d2b45; }
+  footer a { color: #22c55e; text-decoration: none; }
+
+</style>
+</head>
+<body>
+<header>
+  <h1>Cookie &amp; <span>Tracker Guide</span></h1>
+  <p>What websites remember about you, who else is watching — and how to clean it up, browser by browser.</p>
+</header>
+<div class="wrap">
+  <div class="card">
+    <h2>👤 Your account</h2>
+    <div id="dsAuthArea"></div>
+  </div>
+
+  <div class="card">
+    <h2>🍪 Cookies &amp; trackers, in plain language</h2>
+    <p class="sub">A cookie is a small note a website asks your browser to keep. Some notes help you (staying logged in). Others follow you around the web building an advertising profile.</p>
+    <div class="grid">
+      <div class="tile"><b>🏠 First-party cookies</b><span>Set by the site you are visiting. Used for logins, baskets, preferences. Mostly necessary and mostly harmless.</span></div>
+      <div class="tile"><b>🕵️ Third-party cookies</b><span>Set by embedded outsiders — ad networks, analytics, social buttons — on sites they don't own. This is the main tracking mechanism: the same network sees you on thousands of sites.</span></div>
+      <div class="tile"><b>⏱ Session vs persistent</b><span>Session cookies vanish when you close the browser. Persistent ones survive for months or years — that's how 'recently viewed' follows you.</span></div>
+      <div class="tile"><b>👆 Fingerprinting</b><span>When cookies are blocked, trackers combine your screen size, fonts, timezone and hardware into a near-unique ID. Blocking cookies helps; it does not make you invisible.</span></div>
+    </div>
+    <h3>Build a tracker profile: what can they learn about you?</h3>
+    <p class="muted">Toggle the signals a typical ad network collects, and watch the profile it assembles — all without ever knowing your name.</p>
+    <div id="ckSignals"></div>
+    <div class="reveal" id="ckProfile" style="display:block;">
+      <b style="color:#fff;">The profile so far:</b> <span id="ckProfileText">Nothing selected yet — toggle the signals above.</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🧹 Browser walkthroughs: block third-party cookies</h2>
+    <p class="sub">Pick your browser for the exact steps. Then add each job to your cleanup task list below and tick it off.</p>
+    <div class="tabs" id="ckBrowserTabs"></div>
+    <div class="reveal" id="ckSteps" style="display:block;"></div>
+  </div>
+
+  <div class="card">
+    <h2>🗂 My Tracker-Cleanup Tasks</h2>
+    <p class="sub">Your personal cleanup list: one task per browser or site, with progress you can watch fill up. Records are saved under your local account (or guest space) on this device — create, view, edit and delete them any time.</p>
+    <div id="dsRecordForm"></div>
+    <div id="dsRecordList" style="margin-top:18px;"></div>
+  </div>
+</div>
+<section style="max-width:880px;margin:34px auto 0;padding:20px 14px 6px;text-align:center;">
+  <h2 style="font-size:1rem;margin:0 0 10px;color:#94a3b8;">More free tools by Dinal Studios</h2>
+  <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;">
+      <li><a href="https://anaskhan0009.github.io/browser-fingerprint-test/">Browser Fingerprint Test</a></li>
+      <li><a href="https://anaskhan0009.github.io/personal-security-audit-checklist/">Personal Security Audit Checklist</a></li>
+      <li><a href="https://anaskhan0009.github.io/url-safety-checker/">Free URL Safety Checker</a></li>
+      <li><a href="https://anaskhan0009.github.io/data-breach-response-guide/">Data Breach Response Guide</a></li>
+      <li><a href="https://anaskhan0009.github.io/cyber-security-toolkit/">Free Cyber Security Toolkit</a></li>
+      <li><a href="https://anaskhan0009.github.io/digital-footprint-quiz/">Digital Footprint Quiz</a></li>
+  </ul>
+</section>
+<footer>Built by <a href="https://github.com/anaskhan0009">Dinal Studios</a> · Free cyber security tools &amp; web apps · Everything runs locally in your browser — no data is sent anywhere.</footer>
+<script>
+var DS_APP_ID = "cookie-tracker-guide";
+var DS_RECORD_CONFIG = {"nounSingular": "task", "nounPlural": "tasks", "titleField": "task", "progressField": "status", "progressDoneValue": "Done", "fields": [{"key": "task", "label": "Task", "type": "text", "required": true, "placeholder": "e.g. Block third-party cookies in Chrome"}, {"key": "browser", "label": "Browser / app", "type": "select", "options": ["Chrome", "Firefox", "Safari", "Edge", "Brave", "Other"]}, {"key": "status", "label": "Status", "type": "select", "options": ["Not started", "In progress", "Done"]}, {"key": "notes", "label": "Notes", "type": "textarea", "placeholder": "Anything that broke, exceptions you allowed, dates\u2026"}]};
+</script>
+<script>
+/* ==CORE-START== */
+function ds_sha256(text){
+  var enc = new TextEncoder().encode(text);
+  return crypto.subtle.digest("SHA-256", enc).then(function(buf){
+    return Array.prototype.map.call(new Uint8Array(buf), function(b){ return ("00" + b.toString(16)).slice(-2); }).join("");
+  });
+}
+function ds_randomHex(bytes){
+  var a = new Uint8Array(bytes); crypto.getRandomValues(a);
+  return Array.prototype.map.call(a, function(b){ return ("00" + b.toString(16)).slice(-2); }).join("");
+}
+function ds_storeGet(key, fallback){
+  try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch(e){ return fallback; }
+}
+function ds_storeSet(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+
+var DSAuth = {
+  usersKey: function(){ return "ds_users_" + DS_APP_ID; },
+  sessionKey: function(){ return "ds_session_" + DS_APP_ID; },
+  users: function(){ return ds_storeGet(this.usersKey(), []); },
+  saveUsers: function(u){ ds_storeSet(this.usersKey(), u); },
+  publicUser: function(u){ return { id: u.id, name: u.name, email: u.email, createdAt: u.createdAt }; },
+  signup: function(name, email, password){
+    name = (name || "").trim(); email = (email || "").trim().toLowerCase();
+    if(!name) return Promise.reject(new Error("Please enter your name."));
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return Promise.reject(new Error("Please enter a valid email address."));
+    if(!password || password.length < 6) return Promise.reject(new Error("Password must be at least 6 characters."));
+    var users = this.users(), i;
+    for(i = 0; i < users.length; i++){ if(users[i].email === email) return Promise.reject(new Error("An account with this email already exists on this device.")); }
+    var salt = ds_randomHex(16), self = this;
+    return ds_sha256(salt + ":" + password).then(function(hash){
+      var user = { id: "u_" + ds_randomHex(8), name: name, email: email, salt: salt, hash: hash, createdAt: new Date().toISOString() };
+      users.push(user); self.saveUsers(users); self.setSession(user.id);
+      return self.publicUser(user);
+    });
+  },
+  login: function(email, password){
+    email = (email || "").trim().toLowerCase();
+    var users = this.users(), user = null, i;
+    for(i = 0; i < users.length; i++){ if(users[i].email === email) user = users[i]; }
+    if(!user) return Promise.reject(new Error("No account found for that email on this device."));
+    var self = this;
+    return ds_sha256(user.salt + ":" + (password || "")).then(function(hash){
+      if(hash !== user.hash) throw new Error("Incorrect password.");
+      self.setSession(user.id); return self.publicUser(user);
+    });
+  },
+  continueAsGuest: function(){ this.setSession("guest"); },
+  logout: function(){ localStorage.removeItem(this.sessionKey()); },
+  setSession: function(id){ ds_storeSet(this.sessionKey(), { userId: id, at: new Date().toISOString() }); },
+  session: function(){ return ds_storeGet(this.sessionKey(), null); },
+  currentUser: function(){
+    var s = this.session(); if(!s || !s.userId || s.userId === "guest") return null;
+    var users = this.users(), i;
+    for(i = 0; i < users.length; i++){ if(users[i].id === s.userId) return this.publicUser(users[i]); }
+    return null;
+  },
+  isGuest: function(){ var s = this.session(); return !s || s.userId === "guest"; },
+  bucketId: function(){ var u = this.currentUser(); return u ? u.id : "guest"; },
+  deleteAccount: function(){
+    var u = this.currentUser(); if(!u) return false;
+    var users = this.users().filter(function(x){ return x.id !== u.id; });
+    this.saveUsers(users);
+    localStorage.removeItem(DSRecords.keyFor(u.id));
+    this.logout(); return true;
+  }
+};
+
+var DSRecords = {
+  keyFor: function(bucket){ return "ds_records_" + DS_APP_ID + "_" + bucket; },
+  key: function(){ return this.keyFor(DSAuth.bucketId()); },
+  list: function(){ return ds_storeGet(this.key(), []); },
+  save: function(rows){ ds_storeSet(this.key(), rows); },
+  create: function(data){
+    var rows = this.list();
+    var rec = { id: "r_" + ds_randomHex(8), createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
+    for(var k in data) rec[k] = data[k];
+    rows.unshift(rec); this.save(rows); return rec;
+  },
+  get: function(id){
+    var rows = this.list();
+    for(var i = 0; i < rows.length; i++) if(rows[i].id === id) return rows[i];
+    return null;
+  },
+  update: function(id, data){
+    var rows = this.list(), i, k;
+    for(i = 0; i < rows.length; i++){
+      if(rows[i].id === id){
+        for(k in data) rows[i][k] = data[k];
+        rows[i].updatedAt = new Date().toISOString(); this.save(rows); return rows[i];
+      }
+    }
+    return null;
+  },
+  remove: function(id){ this.save(this.list().filter(function(r){ return r.id !== id; })); },
+  exportJSON: function(){ return JSON.stringify(this.list(), null, 2); },
+  importJSON: function(text){
+    var parsed = JSON.parse(text);
+    if(!Array.isArray(parsed)) throw new Error("Import file must be a JSON array of records.");
+    var rows = this.list(), added = 0;
+    parsed.forEach(function(r){
+      if(r && typeof r === "object"){
+        if(!r.id) r.id = "r_" + ds_randomHex(8);
+        if(!r.createdAt) r.createdAt = new Date().toISOString();
+        r.updatedAt = new Date().toISOString();
+        rows.push(r); added++;
+      }
+    });
+    this.save(rows); return added;
+  }
+};
+/* ==CORE-END== */
+
+</script>
+<script>
+/* ==UI-START== */
+var DS_EDITING_ID = null;
+function dsEl(id){ return document.getElementById(id); }
+function dsEsc(s){ return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+function dsRenderAuth(){
+  var area = dsEl("dsAuthArea"); if(!area) return;
+  var user = DSAuth.currentUser(), sess = DSAuth.session();
+  var note = '<div class="authnote">🔒 <b>Local account</b> — your data stays on this device only. This is not a cloud account; use a unique password you don\'t use elsewhere.</div>';
+  if(user){
+    area.innerHTML =
+      '<div class="rowflex" style="justify-content:space-between;">' +
+        '<div><b style="color:#fff;font-size:16px;">👤 ' + dsEsc(user.name) + '</b><div class="muted">' + dsEsc(user.email) + ' · Local account on this device</div></div>' +
+        '<div class="rowflex"><button class="btn dark small" onclick="dsScrollSettings()">Profile &amp; settings</button>' +
+        '<button class="btn dark small" onclick="dsDoLogout()">Log out</button></div>' +
+      '</div>' + note +
+      '<div id="dsSettings" style="display:none;margin-top:16px;border-top:1px solid #1f2c47;padding-top:14px;">' +
+        '<h3 style="margin-top:0;">Profile &amp; settings</h3>' +
+        '<p class="muted">Account created: ' + dsEsc((user.createdAt || "").slice(0, 10)) + ' · Records are stored per account on this device.</p>' +
+        '<div class="rowflex">' +
+          '<button class="btn dark small" onclick="dsExportRecords()">⬇ Export my records (JSON)</button>' +
+          '<label class="btn dark small" style="cursor:pointer;">⬆ Import records (JSON)<input type="file" accept=".json,application/json" style="display:none;" onchange="dsImportRecords(this)"></label>' +
+          '<button class="btn danger small" onclick="dsDeleteAccount()">Delete my account</button>' +
+        '</div><div class="msg" id="dsSettingsMsg"></div>' +
+      '</div>';
+  } else if(sess && sess.userId === "guest"){
+    area.innerHTML =
+      '<div class="rowflex" style="justify-content:space-between;">' +
+        '<div><b style="color:#fff;font-size:16px;">👀 Browsing as guest</b><div class="muted">The tool works fully. Anything you save is kept in a guest space on this device only.</div></div>' +
+        '<button class="btn dark small" onclick="dsShowAuthForms()">Log in / Sign up</button>' +
+      '</div><div id="dsAuthForms" style="display:none;">' + dsAuthFormsHTML() + '</div>' + note;
+  } else {
+    area.innerHTML = '<p class="sub" style="margin-bottom:4px;">Create a free local account to save your records, plans and progress on this device — or just continue as a guest.</p>' + dsAuthFormsHTML() + note;
+  }
+}
+function dsAuthFormsHTML(){
+  return '<div class="tabs"><button class="tab on" id="dsTabSignup" onclick="dsAuthTab(\'signup\')">Sign up</button>' +
+    '<button class="tab" id="dsTabLogin" onclick="dsAuthTab(\'login\')">Log in</button></div>' +
+    '<div id="dsSignupForm">' +
+      '<label class="flabel">Name</label><input type="text" id="dsSuName" placeholder="Your name" autocomplete="name">' +
+      '<label class="flabel">Email</label><input type="email" id="dsSuEmail" placeholder="you@example.com" autocomplete="email">' +
+      '<label class="flabel">Password (min. 6 characters)</label><input type="password" id="dsSuPass" placeholder="A unique password for this app" autocomplete="new-password">' +
+      '<button class="btn" onclick="dsDoSignup()">Create local account</button>' +
+    '</div>' +
+    '<div id="dsLoginForm" style="display:none;">' +
+      '<label class="flabel">Email</label><input type="email" id="dsLiEmail" placeholder="you@example.com" autocomplete="email">' +
+      '<label class="flabel">Password</label><input type="password" id="dsLiPass" placeholder="Your password" autocomplete="current-password">' +
+      '<button class="btn" onclick="dsDoLogin()">Log in</button>' +
+    '</div>' +
+    '<div class="msg" id="dsAuthMsg"></div>' +
+    '<button class="btn dark" onclick="dsDoGuest()">Continue as guest →</button>';
+}
+function dsShowAuthForms(){ var f = dsEl("dsAuthForms"); if(f) f.style.display = "block"; }
+function dsScrollSettings(){ var s = dsEl("dsSettings"); if(s){ s.style.display = "block"; s.scrollIntoView({ behavior: "smooth", block: "center" }); } }
+function dsAuthTab(which){
+  dsEl("dsSignupForm").style.display = which === "signup" ? "block" : "none";
+  dsEl("dsLoginForm").style.display = which === "login" ? "block" : "none";
+  dsEl("dsTabSignup").className = "tab" + (which === "signup" ? " on" : "");
+  dsEl("dsTabLogin").className = "tab" + (which === "login" ? " on" : "");
+}
+function dsAuthError(e){ var m = dsEl("dsAuthMsg"); if(m){ m.className = "msg err"; m.textContent = (e && e.message) || String(e); } }
+function dsDoSignup(){
+  DSAuth.signup(dsEl("dsSuName").value, dsEl("dsSuEmail").value, dsEl("dsSuPass").value)
+    .then(function(){ DS_EDITING_ID = null; dsRenderAuth(); dsRenderRecords(); })
+    .catch(dsAuthError);
+}
+function dsDoLogin(){
+  DSAuth.login(dsEl("dsLiEmail").value, dsEl("dsLiPass").value)
+    .then(function(){ DS_EDITING_ID = null; dsRenderAuth(); dsRenderRecords(); })
+    .catch(dsAuthError);
+}
+function dsDoGuest(){ DSAuth.continueAsGuest(); dsRenderAuth(); dsRenderRecords(); }
+function dsDoLogout(){ DSAuth.logout(); DS_EDITING_ID = null; dsRenderAuth(); dsRenderRecords(); }
+function dsDeleteAccount(){
+  if(!confirm("Delete your local account and ALL its saved records from this device? This cannot be undone.")) return;
+  DSAuth.deleteAccount(); DS_EDITING_ID = null; dsRenderAuth(); dsRenderRecords();
+}
+function dsExportRecords(){
+  var blob = new Blob([DSRecords.exportJSON()], { type: "application/json" });
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = DS_APP_ID + "-records.json";
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  var m = dsEl("dsSettingsMsg"); if(m){ m.className = "msg ok"; m.textContent = "Records exported as JSON."; }
+}
+function dsImportRecords(input){
+  var file = input.files && input.files[0]; if(!file) return;
+  var reader = new FileReader(), m = dsEl("dsSettingsMsg");
+  reader.onload = function(){
+    try {
+      var n = DSRecords.importJSON(String(reader.result));
+      if(m){ m.className = "msg ok"; m.textContent = "Imported " + n + " record(s)."; }
+      dsRenderRecords();
+    } catch(e){ if(m){ m.className = "msg err"; m.textContent = "Import failed: " + e.message; } }
+  };
+  reader.readAsText(file); input.value = "";
+}
+
+function dsFieldInput(f, val){
+  var v = val == null ? "" : val, req = f.required ? " required" : "";
+  if(f.type === "textarea") return '<textarea id="dsF_' + f.key + '" placeholder="' + dsEsc(f.placeholder || "") + '"' + req + '>' + dsEsc(v) + '</textarea>';
+  if(f.type === "select"){
+    var out = '<select id="dsF_' + f.key + '">';
+    (f.options || []).forEach(function(o){ out += '<option value="' + dsEsc(o) + '"' + (String(v) === String(o) ? " selected" : "") + '>' + dsEsc(o) + '</option>'; });
+    return out + '</select>';
+  }
+  return '<input type="' + f.type + '" id="dsF_' + f.key + '" value="' + dsEsc(v) + '" placeholder="' + dsEsc(f.placeholder || "") + '"' + req + '>';
+}
+function dsRenderRecordForm(){
+  var host = dsEl("dsRecordForm"); if(!host) return;
+  var cfg = DS_RECORD_CONFIG, rec = DS_EDITING_ID ? DSRecords.get(DS_EDITING_ID) : null;
+  var html = '<h3 style="margin-top:0;">' + (rec ? "Edit" : "Add") + " " + dsEsc(cfg.nounSingular) + '</h3>';
+  cfg.fields.forEach(function(f){
+    html += '<label class="flabel">' + dsEsc(f.label) + (f.hint ? ' <span style="color:#64748b;">— ' + dsEsc(f.hint) + '</span>' : "") + '</label>' + dsFieldInput(f, rec ? rec[f.key] : (f.def || ""));
+  });
+  html += '<div class="rowflex"><button class="btn" onclick="dsSaveRecord()">' + (rec ? "Save changes" : "Add " + dsEsc(cfg.nounSingular)) + '</button>';
+  if(rec) html += '<button class="btn dark" onclick="dsCancelEdit()">Cancel</button>';
+  html += '</div><div class="msg" id="dsRecMsg"></div>';
+  host.innerHTML = html;
+}
+function dsSaveRecord(){
+  var cfg = DS_RECORD_CONFIG, data = {}, ok = true;
+  cfg.fields.forEach(function(f){
+    var el = dsEl("dsF_" + f.key); var v = el ? el.value.trim() : "";
+    if(f.required && !v) ok = false;
+    data[f.key] = f.type === "number" ? (v === "" ? "" : Number(v)) : v;
+  });
+  var m = dsEl("dsRecMsg");
+  if(!ok){ if(m){ m.className = "msg err"; m.textContent = "Please fill in the required fields."; } return; }
+  if(DS_EDITING_ID) DSRecords.update(DS_EDITING_ID, data); else DSRecords.create(data);
+  DS_EDITING_ID = null; dsRenderRecordForm(); dsRenderRecordList();
+}
+function dsEditRecord(id){ DS_EDITING_ID = id; dsRenderRecordForm(); dsEl("dsRecordForm").scrollIntoView({ behavior: "smooth", block: "center" }); }
+function dsCancelEdit(){ DS_EDITING_ID = null; dsRenderRecordForm(); }
+function dsDeleteRecord(id){
+  if(!confirm("Delete this record? This cannot be undone.")) return;
+  if(DS_EDITING_ID === id) DS_EDITING_ID = null;
+  DSRecords.remove(id); dsRenderRecordForm(); dsRenderRecordList();
+}
+function dsPillClass(v){
+  var s = String(v || "").toLowerCase();
+  if(/done|in place|looks fine|valid|safe|low/.test(s)) return "pill";
+  if(/avoid|high|error|no https|blocked|scam/.test(s)) return "pill red";
+  if(/caution|progress|started|review|medium|partial/.test(s)) return "pill amber";
+  return "pill";
+}
+function dsRenderRecordList(){
+  var host = dsEl("dsRecordList"); if(!host) return;
+  var cfg = DS_RECORD_CONFIG, rows = DSRecords.list();
+  var html = "";
+  if(cfg.progressField){
+    var done = rows.filter(function(r){ return r[cfg.progressField] === cfg.progressDoneValue; }).length;
+    var pct = rows.length ? Math.round(done / rows.length * 100) : 0;
+    html += '<p class="muted" style="margin-top:0;">Progress: <b style="color:#fff;">' + done + " / " + rows.length + '</b> done (' + pct + '%)</p><div class="bar"><i style="width:' + pct + '%;"></i></div>';
+  }
+  if(!rows.length){
+    html += '<p class="muted">No ' + dsEsc(cfg.nounPlural) + ' saved yet. Add your first one with the form — it stays saved under your account on this device.</p>';
+  }
+  rows.forEach(function(r){
+    html += '<div class="rec"><div class="rt">' + dsEsc(r[cfg.titleField] || "(untitled)") + '</div><div class="rm">';
+    cfg.fields.forEach(function(f){
+      if(f.key === cfg.titleField) return;
+      var v = r[f.key]; if(v === "" || v == null) return;
+      if(f.type === "select") html += '<span class="' + dsPillClass(v) + '">' + dsEsc(v) + '</span> ';
+      else html += '<b>' + dsEsc(f.label) + ':</b> ' + dsEsc(v) + "<br>";
+    });
+    html += '<br><span style="color:#64748b;">Saved ' + dsEsc((r.createdAt || "").slice(0, 10)) + (r.updatedAt && r.updatedAt !== r.createdAt ? " · edited " + dsEsc(r.updatedAt.slice(0, 10)) : "") + '</span></div>';
+    html += '<div class="ractions"><button class="btn dark small" onclick="dsEditRecord(\'' + r.id + '\')">✏️ Edit</button>' +
+            '<button class="btn danger small" onclick="dsDeleteRecord(\'' + r.id + '\')">🗑 Delete</button></div></div>';
+  });
+  host.innerHTML = html;
+}
+function dsRenderRecords(){ dsRenderRecordForm(); dsRenderRecordList(); }
+document.addEventListener("DOMContentLoaded", function(){ dsRenderAuth(); dsRenderRecords(); if(window.DS_TOOL_INIT) DS_TOOL_INIT(); });
+/* ==UI-END== */
+
+</script>
+<script>
+
+var CK_SIGNALS = [
+  { t: "Pages you visit across many sites", p: "your interests and reading habits" },
+  { t: "How long you stay & what you click", p: "your attention patterns and buying intent" },
+  { t: "Device, screen size & browser version", p: "a device fingerprint that survives cookie deletion" },
+  { t: "Your city-level location (from IP)", p: "where you live and where you travel" },
+  { t: "Products you viewed in shops", p: "exactly which ads to chase you with (retargeting)" },
+  { t: "Logged-in social buttons on pages", p: "a link between your browsing and your real social identity" }
+];
+var CK_BROWSERS = {
+  "Chrome": ["Open Settings → Privacy and security → Third-party cookies.", "Choose 'Block third-party cookies' (or 'Block in Incognito' as a softer step).", "Back in Privacy and security → 'Delete browsing data' → clear cookies for 'All time' once, to remove what is already stored.", "Revisit quarterly: ad settings reset after some updates."],
+  "Firefox": ["Open Settings → Privacy & Security.", "Under Enhanced Tracking Protection choose 'Strict' — it blocks third-party cookies and fingerprinters.", "Scroll to Cookies and Site Data → 'Clear Data' for a one-time clean-out.", "Firefox blocks most cross-site tracking by default; Strict may rarely break a login — use the shield icon to allow a site if needed."],
+  "Safari": ["Open Settings (Preferences) → Privacy.", "Tick 'Prevent cross-site tracking' and 'Block all cookies' only if you accept some sites breaking.", "Use 'Manage Website Data' to delete stored data site-by-site or all at once.", "Turn on 'Privacy Preserving Ad Measurement' off/on per your preference; keep 'Check for Apple Pay' separate."],
+  "Edge": ["Open Settings → Cookies and site permissions → Manage and delete cookies.", "Turn on 'Block third-party cookies'.", "In Privacy, search and services, set Tracking prevention to 'Balanced' or 'Strict'.", "Clear existing cookies once via 'Clear browsing data'."],
+  "Brave": ["Brave blocks third-party cookies and fingerprinting by default (Shields).", "Open Settings → Shields → set Fingerprinting to 'Strict' if you want maximum protection.", "Use a Private Window with Tor for sensitive browsing sessions.", "Per-site: click the Shields lion icon to relax a broken site instead of lowering global settings."]
+};
+var ckOn = {};
+function DS_TOOL_INIT(){
+  var host = document.getElementById("ckSignals");
+  CK_SIGNALS.forEach(function(s, i){
+    var label = document.createElement("label");
+    label.className = "item";
+    label.innerHTML = '<input type="checkbox" id="ckS' + i + '"><span><span class="t">' + s.t + '</span></span>';
+    label.querySelector("input").addEventListener("change", ckProfile);
+    host.appendChild(label);
+  });
+  var tabs = document.getElementById("ckBrowserTabs"), first = true;
+  Object.keys(CK_BROWSERS).forEach(function(name){
+    var b = document.createElement("button");
+    b.className = "tab" + (first ? " on" : ""); b.textContent = name;
+    b.onclick = function(){
+      tabs.querySelectorAll(".tab").forEach(function(x){ x.classList.remove("on"); });
+      b.classList.add("on"); ckShowSteps(name);
+    };
+    tabs.appendChild(b);
+    if(first) ckShowSteps(name);
+    first = false;
+  });
+}
+function ckShowSteps(name){
+  var out = document.getElementById("ckSteps");
+  out.innerHTML = "<b style='color:#fff;'>" + name + "</b><ol style='margin:8px 0 0;padding-left:20px;'>" +
+    CK_BROWSERS[name].map(function(s){ return "<li style='margin-bottom:6px;'>" + s + "</li>"; }).join("") + "</ol>" +
+    '<p class="muted">Done it? Add "' + name + ' third-party cookies blocked" as a task in your list below and mark it Done.</p>';
+}
+function ckProfile(){
+  var parts = [];
+  CK_SIGNALS.forEach(function(s, i){
+    var c = document.getElementById("ckS" + i);
+    if(c && c.checked) parts.push(s.p);
+  });
+  document.getElementById("ckProfileText").textContent = parts.length ?
+    "An ad network can now infer: " + parts.join("; ") + ". Advertisers bid in real time for profiles like this — no name needed." :
+    "Nothing selected yet — toggle the signals above.";
+}
+
+</script>
+</body>
+</html>
